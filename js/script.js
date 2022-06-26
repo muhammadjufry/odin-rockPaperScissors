@@ -1,7 +1,6 @@
 function computerPlay() {
   let randomWeapons = ['rock', 'paper', 'scissors'];
   return randomWeapons[Math.floor(Math.random() * randomWeapons.length)];
-
 }
 
 function playRound(playerSelection, computerSelection) {
@@ -44,10 +43,10 @@ function playRound(playerSelection, computerSelection) {
 }
 
 function game(){
-  for (let i = 0; i < 5; i++){
-    const playerSelection = prompt('Please enter the name of your weapon');
-    const computerSelection = computerPlay();
-    console.log(playRound(playerSelection, computerSelection));
-  }
+  // for (let i = 0; i < 5; i++){
+  //   const playerSelection = prompt('Please enter the name of your weapon');
+  //   const computerSelection = computerPlay();
+  //   console.log(playRound(playerSelection, computerSelection));
+  // }
 }
 game();
