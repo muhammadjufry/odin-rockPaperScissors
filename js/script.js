@@ -1,8 +1,7 @@
-const rock = document.querySelector(".rock");
-const paper = document.querySelector(".paper");
-const scissors = document.querySelector(".scissors");
-
-
+const rock = document.querySelector('.rock');
+const paper = document.querySelector('.paper');
+const scissors = document.querySelector('.scissors');
+const result = document.querySelector('.result');
 
 function computerPlay() {
   let randomWeapons = ['rock', 'paper', 'scissors'];
@@ -10,68 +9,74 @@ function computerPlay() {
 }
 
 function playRound(playerSelection, computerSelection) {
-  let result = '';
+  const p = document.createElement('p');
   let playerSelectionToLower = playerSelection.toLowerCase();
 
   // Player Chooses Rock
   if (playerSelectionToLower === 'rock') {
     if (computerSelection === 'rock') {
-      result = 'Tie!';
+      p.innerText = 'Tie!';
+      result.appendChild(p);
     } else if (computerSelection === 'paper') {
-      result = 'You lose! Paper beats Rock';
+      p.innerText = 'You lose! Paper beats Rock';
+      result.appendChild(p);
     } else {
-      result = 'You win! Rock beats Scissors';
+      p.innerText = 'You win! Rock beats Scissors';
+      result.appendChild(p);
     }
   }
 
   // Player Chooses Paper
   if (playerSelectionToLower === 'paper') {
     if (computerSelection === 'rock') {
-      result = 'You win! Rock beats Paper';
+      p.innerText = 'You win! Rock beats Paper';
+      result.appendChild(p);
     } else if (computerSelection === 'paper') {
-      result = 'Tie!';
+      p.innerText = 'Tie!';
+      result.appendChild(p);
     } else {
-      result = 'You lose! Scissors beats Paper';
+      p.innerText = 'You lose! Scissors beats Paper';
+      result.appendChild(p);
     }
   }
 
   // Player Chooses Scissors
   if (playerSelectionToLower === 'scissors') {
     if (computerSelection === 'rock') {
-      result = 'You lose! Rock beats scissors';
+      p.innerText = 'You lose! Rock beats scissors';
+      result.appendChild(p);
     } else if (computerSelection === 'paper') {
-      result = 'You win! Paper beats scissors';
+      p.innerText = 'You win! Paper beats scissors';
+      result.appendChild(p);
     } else {
-      result = 'Tie!';
+      p.innerText = 'Tie!';
+      result.appendChild(p);
     }
   }
-  return result;
 }
 
-rock.addEventListener('click', function(){
-  const playerSelection = "rock";
-  const computerSelection = computerPlay(); 
-  console.log(playRound(playerSelection, computerSelection));
-})
+rock.addEventListener('click', function () {
+  const playerSelection = 'rock';
+  const computerSelection = computerPlay();
+  playRound(playerSelection, computerSelection);
+});
 
-paper.addEventListener('click', function(){
-  const playerSelection = "paper";
-  const computerSelection = computerPlay(); 
-  console.log(playRound(playerSelection, computerSelection));
-})
+paper.addEventListener('click', function () {
+  const playerSelection = 'paper';
+  const computerSelection = computerPlay();
+  playRound(playerSelection, computerSelection);
+});
 
-scissors.addEventListener('click', function(){
-  const playerSelection = "scissors";
-  const computerSelection = computerPlay(); 
-  console.log(playRound(playerSelection, computerSelection));
-})
+scissors.addEventListener('click', function () {
+  const playerSelection = 'scissors';
+  const computerSelection = computerPlay();
+  playRound(playerSelection, computerSelection);
+});
 
-
-function game(){
-  // for (let i = 0; i < 5; i++){
-  //   const playerSelection = prompt('Please enter the name of your weapon');
-  //   const computerSelection = computerPlay();
-  //   console.log(playRound(playerSelection, computerSelection));
-  // }
-}
-game();
+// function game() {
+//   for (let i = 0; i < 5; i++){
+//     const playerSelection = prompt('Please enter the name of your weapon');
+//     const computerSelection = computerPlay();
+//     console.log(playRound(playerSelection, computerSelection));
+//   }
+// }
