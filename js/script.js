@@ -1,3 +1,9 @@
+const rock = document.querySelector(".rock");
+const paper = document.querySelector(".paper");
+const scissors = document.querySelector(".scissors");
+
+
+
 function computerPlay() {
   let randomWeapons = ['rock', 'paper', 'scissors'];
   return randomWeapons[Math.floor(Math.random() * randomWeapons.length)];
@@ -41,6 +47,25 @@ function playRound(playerSelection, computerSelection) {
   }
   return result;
 }
+
+rock.addEventListener('click', function(){
+  const playerSelection = "rock";
+  const computerSelection = computerPlay(); 
+  console.log(playRound(playerSelection, computerSelection));
+})
+
+paper.addEventListener('click', function(){
+  const playerSelection = "paper";
+  const computerSelection = computerPlay(); 
+  console.log(playRound(playerSelection, computerSelection));
+})
+
+scissors.addEventListener('click', function(){
+  const playerSelection = "scissors";
+  const computerSelection = computerPlay(); 
+  console.log(playRound(playerSelection, computerSelection));
+})
+
 
 function game(){
   // for (let i = 0; i < 5; i++){
