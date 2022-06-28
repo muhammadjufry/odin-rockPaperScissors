@@ -90,7 +90,7 @@ function checkForTheWinner(playerScores, computerScores) {
     gameOver();
   } else if (computerScores === 5) {
     h2.classList.add("computerWon");
-    h2.innerText = `You lose ${playerScores} to ${computerScores} great job beating the computer!`;
+    h2.innerText = `You lose ${playerScores} to ${computerScores} please try again!`;
     result.appendChild(h2);
     gameOver();
   }
