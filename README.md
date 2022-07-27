@@ -8,6 +8,7 @@
 
 - HTML5(Basic)
 - JAVASCRIPT(Basic)
+- DOM(Basic)
 
 ## Live Demo Of The Project
 
